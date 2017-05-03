@@ -49,7 +49,6 @@ class DefaultController extends Controller
         $response->setContent(file_get_contents($imageUri));
         $response->setSharedMaxAge(time() % 86400);
         $response->headers->addCacheControlDirective('must-revalidate', true);
-        $response->setNotModified();
 
         return $response;
     }
