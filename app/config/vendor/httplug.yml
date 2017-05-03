@@ -1,0 +1,12 @@
+httplug:
+    profiling:
+            captured_body_length: 1000 # Capture the first 1000 chars of the HTTP body
+    plugins:
+        logger: ~
+    clients:
+        acme:
+            factory: 'httplug.factory.guzzle6'
+            plugins: ['httplug.plugin.logger']
+            config:
+                verify: false
+                timeout: 2

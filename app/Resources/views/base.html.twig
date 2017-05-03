@@ -245,40 +245,21 @@
             letter-spacing: 1px;
             clear: both;
         }</style>
-    <title>Navagio Beach at Zakynthos, Greece - Bing&trade; Wallpaper Gallery</title>
+    <title>{% block title %}bing Wallpapers{% endblock %}</title>
     <meta name='description'
-          content='Navagio Beach at Zakynthos, Greece  - Bing Wallpaper. Bing daily images are all in BingWallpaper.com. Provides Bing daily wallpaper images gallery for several countries.'/>
-    <meta name='keywords'
-          content='Navagio Beach at Zakynthos, Greece , Bing Wallpaper Gallery,Bing Daily Images, free bing images,free bing wallpapers,bing images,bing wallpapers,images,wallpapers,free wallpapers,free images,Bing Wallpaper of the day'/>
-</head>
+          content='{% block description %}Provides Bing daily wallpaper images gallery for several countries.{% endblock %}'/>
+    </head>
 <body>
 <div id="header" class="layout">
-    <a id="logo" href="{{ path('homepage') }}" name="logo"><img src="/images/logo.gif" border="0" alt="Image"/></a>
+    <a id="logo" href="{{ path('homepage') }}" name="logo"><img src="{{ asset('images/logo.gif') }}" border="0" alt="bing"/></a>
     <div id="nav_list">
     </div>
     <div id="head_line">
     </div>
 </div>
 <div id="index-main" class="layout">
-    <div id="photos" class="galleryview">
-        <div class='panel'>
-            <div class='imgContainer'><img src='//www.bing.com/az/hprichbg/rb/NavagioBeach_EN-US8854639142_1366x768.jpg'
-                                           alt='Navagio Beach at Zakynthos, Greece (© Maciej Tomków/Nimia)(Bing United States)'
-                                           title='Navagio Beach at Zakynthos, Greece (© Maciej Tomków/Nimia)(Bing United States)'
-                                           width='100%'/>
-                <div class='nph_photo_next'><a href='' title='Next' hidefocus='true' target='_self'
-                                               class='nph_btn_nphoto' id='photoNext'></a></div>
-                <div class='nph_photo_prev'><a href='20170502.html' title='Previous' hidefocus='true' target='_self'
-                                               class='nph_btn_pphoto' id='photoPrev'></a></div>
-            </div>
-            <div class='panel-overlay'><p>Navagio Beach at Zakynthos, Greece (© Maciej Tomków/Nimia)(Bing United
-                    States)</p></div>
-            <div class='comments'><p></p></div>
-        </div>
-        <ul class='filmstrip'></ul>
-    </div>
-    <div align="center" style="position:relative;top:10px;">
-    </div>
+    {% block content %}
+    {% endblock %}
 </div>
 <div id="footer" class="layout">
     <p align="center">Images are copyright to their respective owners. Bing is a trademark of Microsoft. This app is not
