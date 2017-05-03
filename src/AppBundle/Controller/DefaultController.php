@@ -31,7 +31,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/daily.jpg", name="homepage")
+     * @Route("/daily.jpg", name="daily")
      */
     public function dailyWallpaperAction(Request $request)
     {
