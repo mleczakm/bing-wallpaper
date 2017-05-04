@@ -47,7 +47,7 @@ class DefaultController extends Controller
         $response->headers->set('Content-Disposition', $disposition);
         $response->headers->set('Content-Type', 'image/jpeg');
         $response->setContent(file_get_contents($imageUri));
-        $response->setSharedMaxAge(time() % 86400);
+        $response->setSharedMaxAge(86400 - (time() % 86400));
         $response->headers->addCacheControlDirective('must-revalidate', true);
 
         return $response;
